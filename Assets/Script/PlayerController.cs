@@ -13,9 +13,11 @@ public class PlayerController : MonoBehaviour {
 	public float m_shotTimer; // 弾の発射タイミングを管理するタイマー
 	public int m_shotCount; // 弾の発射数
 	public float m_shotInterval; // 弾の発射間隔（秒）
+	public int  p_hp;
+	GameObject boss;
 	// Use this for initialization
 
-	public static Vector2 m_moveLimit = new Vector2( 80.7f, 7.0f );
+	public static Vector2 m_moveLimit = new Vector2( 19.4f, 4.0f );
 
 	// 指定された位置を移動可能な範囲に収めた値を返す
 	public static Vector3 ClampPosition( Vector3 position )
@@ -30,26 +32,13 @@ public class PlayerController : MonoBehaviour {
 
 	void Start () {
 		
-		aS = GetComponent<AudioSource>();
+		boss = GameObject.Find ("Boss");
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	/*	if(Input.GetKeyDown(KeyCode.LeftArrow)){
-			transform.Translate(-0.5f,0,0);
-		}
 
-		if(Input.GetKeyDown(KeyCode.RightArrow)){
-			transform.Translate(0.5f,0,0);
-		}
 
-		if(Input.GetKeyDown(KeyCode.UpArrow)){
-			transform.Translate(0,0.5f,0);
-		}
-
-		if(Input.GetKeyDown(KeyCode.DownArrow)){
-			transform.Translate(0,-0.5f,0);
-	}*/
 		// 矢印キーの入力情報を取得する
 		var h = Input.GetAxis( "Horizontal" );
 		var v = Input.GetAxis( "Vertical" );
@@ -59,13 +48,10 @@ public class PlayerController : MonoBehaviour {
 		transform.localPosition += velocity;
 	
 
-
-
-		if (Input.GetKeyDown (KeyCode.Space)) {
-			
-			GameObject go =Instantiate (arrowPrefab, transform.position, Quaternion.Euler(0, 0, 90));	
-			aS.PlayOneShot(boyon);
-		}
+		//if (Input.GetKeyDown (KeyCode.Space)) {			
+		//	GameObject go =Instantiate (arrowPrefab, transform.position, Quaternion.Euler(0, 0, 90));	
+		//	aS.PlayOneShot(boyon);
+		//}
 		transform.localPosition = ClampPosition( transform.localPosition );
 
 		// 弾の発射タイミングを管理するタイマーを更新する
@@ -97,10 +83,6 @@ public class PlayerController : MonoBehaviour {
 		ShootNWay( angle, m_shotAngleRange, m_shotSpeed, m_shotCount );
 
 
-		if (this.gameObject.GetComponent<Transform>().position.x > 84) {
-			Debug.Log ("いどう");
-			SceneManager.LoadScene ("GameOverScene");
-		}
 
 
 
@@ -155,26 +137,32 @@ public class PlayerController : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D col) {
 		
-	if (col.tag == "Goal") {
-			Debug.Log ("いどう");
-		SceneManager.LoadScene ("GameOverScene");
+		Debug.Log ("あたり");
+		GameObject director = GameObject.Find ("GameDirector");
+
+		if (col.gameObject.tag == "enemy") {
+			Destroy (col.gameObject);
+			Debug.Log ("えねみー");
+			director.GetComponent<GameDirector> ().DecreaseHP ();
+		}
+
+		if (col.gameObject.tag == "Boss") {
+			Debug.Log ("ぼす");
+			boss.GetComponent<BossController> ().Hp += -1; 
+
+			if ( col.gameObject.tag == "Powerup")
+			{
+				Destroy (col.gameObject);
+				Debug.Log ("ぱわーあっぷ");
+				m_shotCount += 1;
+
+			}	
+
+			if ( col.gameObject.tag == "arrow")
+			{
+				Destroy (col.gameObject);
+
+			}	
+		}
 	}
-		//}
 	}
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	
-

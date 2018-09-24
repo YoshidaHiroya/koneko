@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Shot : MonoBehaviour {
-	// Use this for initialization
-	// プレイヤーが発射する弾を制御するコンポー
-		private Vector3 m_velocity; // 速度
 
-		// 毎フレーム呼び出される関数
+	private Vector3 m_velocity; // 速度
+
+	private void Start(){
+	}
+
+		
 		private void Update()
 		{
 			// 移動する
@@ -39,5 +41,8 @@ public class Shot : MonoBehaviour {
 				Mathf.Sin( angle * Mathf.Deg2Rad ),
 				0
 			);
+		
 	}
+
+
 	}

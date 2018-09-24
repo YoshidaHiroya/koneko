@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4311480054913570}
   - component: {fileID: 212457770826190790}
   - component: {fileID: 61052782589603664}
-  - component: {fileID: 114853801743430884}
   - component: {fileID: 50308692576048006}
   - component: {fileID: 114972081781710130}
   - component: {fileID: 114543574953794662}
@@ -113,18 +112,6 @@ MonoBehaviour:
   explosionPrefab: {fileID: 0}
   gemPrefab: {fileID: 0}
   m_explosionPrefab: {fileID: 0}
---- !u!114 &114853801743430884
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1776687885017130}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5d0e243fc5ea4a17b69b9c1bddfff02, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gemPrefab: {fileID: 0}
 --- !u!114 &114972081781710130
 MonoBehaviour:
   m_ObjectHideFlags: 1

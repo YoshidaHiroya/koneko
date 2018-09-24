@@ -7,6 +7,8 @@ TagManager:
   - enemy
   - Goal
   - Shot
+  - Boss
+  - Powerup
   layers:
   - Default
   - TransparentFX

@@ -20,12 +20,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4015682950063088}
   - component: {fileID: 212104421917665292}
-  - component: {fileID: 114766482408294176}
-  - component: {fileID: 50249582608149548}
   - component: {fileID: 61515729378050770}
-  - component: {fileID: 114419066213689368}
+  - component: {fileID: 114669337516003040}
+  - component: {fileID: 114268906336693368}
   m_Layer: 0
-  m_Name: arrow
+  m_Name: Shot
   m_TagString: Shot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,26 +43,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!50 &50249582608149548
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1778855196619994}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!61 &61515729378050770
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -89,18 +68,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
---- !u!114 &114419066213689368
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1778855196619994}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9414554bf44874ad8a0fd200886b3c20, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114766482408294176
+--- !u!114 &114268906336693368
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -112,6 +80,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 100000, guid: 4c5a17ca1f9fec84e941441ebb8be079, type: 2}
+--- !u!114 &114669337516003040
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1778855196619994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9414554bf44874ad8a0fd200886b3c20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212104421917665292
 SpriteRenderer:
   m_ObjectHideFlags: 1

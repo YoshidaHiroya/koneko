@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{FC9411EB-1B12-4154-0219-EEA7CBD09863}</ProjectGuid>
+    <ProjectGuid>{AED282D8-5FA6-21A5-9EE6-7428484EB24E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -51,9 +51,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Script\arrow.cs" />
      <Compile Include="Assets\Script\ArrowController.cs" />
-     <Compile Include="Assets\Script\ArrowGenerator.cs" />
      <Compile Include="Assets\Script\background.cs" />
+     <Compile Include="Assets\Script\BossController.cs" />
      <Compile Include="Assets\Script\CameraController.cs" />
      <Compile Include="Assets\Script\Enemy.cs" />
      <Compile Include="Assets\Script\enemyController.cs" />
@@ -64,6 +65,7 @@
      <Compile Include="Assets\Script\Gem.cs" />
      <Compile Include="Assets\Script\Goal.cs" />
      <Compile Include="Assets\Script\PlayerController.cs" />
+     <Compile Include="Assets\Script\Powerup.cs" />
      <Compile Include="Assets\Script\Shot.cs" />
      <Compile Include="Assets\Script\StarttoStage1.cs" />
      <Compile Include="Assets\Script\Timer.cs" />

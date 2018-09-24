@@ -97,15 +97,17 @@ using System.Linq;
 		// 弾と衝突した場合
 		if ( collision.name.Contains( "Shot" ) )
 		{
+			Debug.Log ("てき");
+			Destroy( collision.gameObject );
+			Destroy( gameObject );
 			// 弾が当たった場所に爆発エフェクトを生成する
 			Instantiate( 
 				m_explosionPrefab, 
 				collision.transform.localPosition, 
 				Quaternion.identity );
-			Debug.Log ("ほうせき");
+			
 
 			// 弾を削除する
-			Destroy( collision.gameObject );
 
 			// 敵の HP を減らす
 			m_hp--;
@@ -117,29 +119,6 @@ using System.Linq;
 			// 敵を削除する
 			Destroy( gameObject );
 
-			var exp = m_exp;
-
-			while ( 0 < exp )
-			{
-				
-				// 生成可能な宝石を配列で取得する
-				var gemPrefabs = m_gemPrefabs.Where( c => c.m_exp <= exp ).ToArray();
-
-				// 生成可能な宝石の配列から、生成する宝石をランダムに決定する
-				var gemPrefab = gemPrefabs[ Random.Range( 0, gemPrefabs.Length ) ];
-				// 敵の位置に宝石を生成する
-
-				var gem = Instantiate( 
-					gemPrefab, transform.localPosition, Quaternion.identity );
-				
-
-				// 宝石を初期化す
-				gem.Init( m_exp, m_gemSpeedMin, m_gemSpeedMax );
-
-			 	// まだ宝石を生成できるかどうか計算する
-		      	exp -= gem.m_exp;
-				Destroy (gameObject);
-			}
 			}
 		}
 	}
