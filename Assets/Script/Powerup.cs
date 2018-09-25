@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Powerup : MonoBehaviour {
 	GameObject player;
+	public AudioClip PowerUp;
 	// Use this for initialization
 	void Start () {
 
@@ -23,6 +24,8 @@ public class Powerup : MonoBehaviour {
 			{
 				Destroy (gameObject);
 				Debug.Log ("ぱわーあっぷ");
+			var audioSource = FindObjectOfType<AudioSource>();
+			audioSource.PlayOneShot (PowerUp);
 			player.GetComponent<PlayerController>().m_shotCount+=1;
 			}	
 		}

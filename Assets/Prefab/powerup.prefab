@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 50068551420566390}
   - component: {fileID: 114527965150804402}
   m_Layer: 0
-  m_Name: 2
+  m_Name: powerup
   m_TagString: Powerup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a097dc788d3544708b49f0f0bd33273b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PowerUp: {fileID: 0}
 --- !u!212 &212132133456677060
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -9,6 +9,7 @@ TagManager:
   - Shot
   - Boss
   - Powerup
+  - Wall
   layers:
   - Default
   - TransparentFX

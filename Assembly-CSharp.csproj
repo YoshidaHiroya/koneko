@@ -56,6 +56,7 @@
      <Compile Include="Assets\Script\background.cs" />
      <Compile Include="Assets\Script\BossController.cs" />
      <Compile Include="Assets\Script\CameraController.cs" />
+     <Compile Include="Assets\Script\CubeManager.cs" />
      <Compile Include="Assets\Script\Enemy.cs" />
      <Compile Include="Assets\Script\enemyController.cs" />
      <Compile Include="Assets\Script\enemyGenerator.cs" />
@@ -69,6 +70,7 @@
      <Compile Include="Assets\Script\Shot.cs" />
      <Compile Include="Assets\Script\StarttoStage1.cs" />
      <Compile Include="Assets\Script\Timer.cs" />
+     <Compile Include="Assets\Script\Wall.cs" />
  <Reference Include="UnityEngine.Analytics">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>

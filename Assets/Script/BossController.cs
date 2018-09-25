@@ -11,6 +11,7 @@ public class BossController : MonoBehaviour {
 	public int Hp;
 	GameObject boss;
 	GameObject player;
+	public AudioClip m_damageClip;
 
 	private float timeleft;
 	float rot;
@@ -57,6 +58,8 @@ public class BossController : MonoBehaviour {
 		if ( collision.name.Contains( "Shot" ))
 			{
 				Hp-=1;// 弾を削除する
+			var audioSource = FindObjectOfType<AudioSource>();
+			audioSource.PlayOneShot( m_damageClip );
 				Destroy( collision.gameObject );
 			}
 			if(Hp==0){

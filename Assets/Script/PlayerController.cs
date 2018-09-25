@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour {
 	public int m_shotCount; // 弾の発射数
 	public float m_shotInterval; // 弾の発射間隔（秒）
 	public int  p_hp;
+	public AudioClip m_damageClip;
+	public AudioClip PowerUp;
 	GameObject boss;
 	// Use this for initialization
 
@@ -144,25 +146,34 @@ public class PlayerController : MonoBehaviour {
 			Destroy (col.gameObject);
 			Debug.Log ("えねみー");
 			director.GetComponent<GameDirector> ().DecreaseHP ();
+			var audioSource = FindObjectOfType<AudioSource>();
+			audioSource.PlayOneShot( m_damageClip );
 		}
 
 		if (col.gameObject.tag == "Boss") {
 			Debug.Log ("ぼす");
 			boss.GetComponent<BossController> ().Hp += -1; 
-
+			var audioSource = FindObjectOfType<AudioSource>();
+			audioSource.PlayOneShot( m_damageClip );
 			if ( col.gameObject.tag == "Powerup")
 			{
 				Destroy (col.gameObject);
 				Debug.Log ("ぱわーあっぷ");
 				m_shotCount += 1;
 
-			}	
 
+			}	
+			if (col.gameObject.tag == "Wall") {
+				Debug.Log ("かべ");
+			}
+				
 			if ( col.gameObject.tag == "arrow")
 			{
+				 audioSource = FindObjectOfType<AudioSource>();
+				audioSource.PlayOneShot( m_damageClip );
 				Destroy (col.gameObject);
 
 			}	
 		}
 	}
-	}
+}

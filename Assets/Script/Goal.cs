@@ -13,9 +13,11 @@ public class Goal : MonoBehaviour {
 	void Update () {
 		
 	}
-	void OnTriggerEnter2D(Collider2D other) {
+	void OnTriggerEnter2D(Collider2D collision) {
+		if(collision.name.Contains( "player" )){
 		Debug.Log ("いどう");
-			SceneManager.LoadScene ("GameOverScene");
+		SceneManager.LoadScene ("GameOverScene");
 
 		}
 }
+			}

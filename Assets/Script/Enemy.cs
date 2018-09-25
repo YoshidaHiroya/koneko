@@ -30,6 +30,8 @@ using System.Linq;
 		private int m_hp; // HP
 		private Vector3 m_direction; // 進行方向
 	public Explosion m_explosionPrefab; // 爆発エフェクトのプレハブ
+	public GameObject PowerupPrefab;
+	public AudioClip m_deathClip;
 		// 敵が生成された時に呼び出される関数
 		private void Start()
 		{
@@ -101,24 +103,15 @@ using System.Linq;
 			Destroy( collision.gameObject );
 			Destroy( gameObject );
 			// 弾が当たった場所に爆発エフェクトを生成する
-			Instantiate( 
+			/*Instantiate( 
 				m_explosionPrefab, 
 				collision.transform.localPosition, 
 				Quaternion.identity );
-			
-
-			// 弾を削除する
-
-			// 敵の HP を減らす
-			m_hp--;
-
-			// 敵の HP がまだ残っている場合はここで処理を終える
-			if ( 0 < m_hp ) return;
-
-
-			// 敵を削除する
-			Destroy( gameObject );
-
+			*/
+			Instantiate (PowerupPrefab, transform.position, Quaternion.Euler(0, 0, 0));	
+			Debug.Log ("生成");
+			var audioSource = FindObjectOfType<AudioSource>();
+			audioSource.PlayOneShot( m_deathClip );
 			}
 		}
 	}

@@ -100,7 +100,7 @@
 -define:UNITY_EDITOR_OSX
 -define:ENABLE_NATIVE_ARRAY_CHECKS
 -define:UNITY_TEAM_LICENSE
-'Assets/arrow.cs'
+'Assets/Script/arrow.cs'
 'Assets/Script/ArrowController.cs'
 'Assets/Script/background.cs'
 'Assets/Script/BossController.cs'
@@ -109,6 +109,7 @@
 'Assets/Script/enemyController.cs'
 'Assets/Script/enemyGenerator.cs'
 'Assets/Script/EnemyManager.cs'
+'Assets/Script/EnemyManager1.cs'
 'Assets/Script/Explosion.cs'
 'Assets/Script/GameDirector.cs'
 'Assets/Script/Gem.cs'
@@ -118,6 +119,7 @@
 'Assets/Script/Shot.cs'
 'Assets/Script/StarttoStage1.cs'
 'Assets/Script/Timer.cs'
+'Assets/Script/Wall.cs'
 -r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Runtime.Serialization.dll'
 -r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Xml.Linq.dll'
 -r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/UnityScript.dll'
