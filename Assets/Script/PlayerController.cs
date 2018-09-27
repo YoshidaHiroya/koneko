@@ -141,11 +141,13 @@ public class PlayerController : MonoBehaviour {
 		
 		Debug.Log ("あたり");
 		GameObject director = GameObject.Find ("GameDirector");
+		GameObject score = GameObject.Find ("Score");
 
 		if (col.gameObject.tag == "enemy") {
 			Destroy (col.gameObject);
 			Debug.Log ("えねみー");
 			director.GetComponent<GameDirector> ().DecreaseHP ();
+			score.GetComponent<Score> ().score += 10;
 			var audioSource = FindObjectOfType<AudioSource>();
 			audioSource.PlayOneShot( m_damageClip );
 		}
@@ -165,6 +167,7 @@ public class PlayerController : MonoBehaviour {
 			}	
 			if (col.gameObject.tag == "Wall") {
 				Debug.Log ("かべ");
+
 			}
 				
 			if ( col.gameObject.tag == "arrow")

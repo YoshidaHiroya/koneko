@@ -11,6 +11,7 @@ using System.Linq;
 		LEFT, // 左
 		SIZEOF, // 敵の出現位置の数
 
+
 	}
 
 	// 敵を制御するコンポーネント
@@ -32,10 +33,12 @@ using System.Linq;
 	public Explosion m_explosionPrefab; // 爆発エフェクトのプレハブ
 	public GameObject PowerupPrefab;
 	public AudioClip m_deathClip;
+	GameObject score;
 		// 敵が生成された時に呼び出される関数
 		private void Start()
 		{
-			// HP を初期化する
+		score = GameObject.Find ("Score");
+		// HP を初期化する
 			m_hp = m_hpMax;
 		}
 
@@ -44,6 +47,7 @@ using System.Linq;
 		{
 			// まっすぐ移動する
 			transform.localPosition += m_direction * m_speed;
+		transform.Translate(-0.1f,0,0);
 		}
 
 		// 敵が出現する時に初期化する関数
@@ -108,7 +112,11 @@ using System.Linq;
 				collision.transform.localPosition, 
 				Quaternion.identity );
 			*/
+
 			Instantiate (PowerupPrefab, transform.position, Quaternion.Euler(0, 0, 0));	
+			score.GetComponent<Score> ().score += 10;
+			//var gem = Instantiate( 
+			//	gemPrefab, transform.localPosition, Quaternion.identity );
 			Debug.Log ("生成");
 			var audioSource = FindObjectOfType<AudioSource>();
 			audioSource.PlayOneShot( m_deathClip );

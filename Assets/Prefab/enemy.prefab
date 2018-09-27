@@ -102,7 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_respawnPosInside: {x: -80, y: 10}
   m_respawnPosOutside: {x: 80, y: 10}
-  m_speed: 0.1
+  m_speed: 0.07
   m_hpMax: 1
   m_exp: 0
   m_damage: 0
@@ -114,10 +114,11 @@ MonoBehaviour:
   m_gemSpeedMin: 0.015
   m_gemSpeedMax: 0.075
   explosionPrefab: {fileID: 0}
-  gemPrefab: {fileID: 1852914463880836, guid: e75f3ee6920b245619a68eb6a7a26543, type: 2}
+  gemPrefab: {fileID: 0}
   m_explosionPrefab: {fileID: 0}
-  PowerupPrefab: {fileID: 0}
-  m_deathClip: {fileID: 8300000, guid: f568f318568a84585bdca09d4cc0bc01, type: 3}
+  PowerupPrefab: {fileID: 1924340040918850, guid: 8c933d63638304b8ca1f8d80720100df,
+    type: 2}
+  m_deathClip: {fileID: 8300000, guid: 3b342db906a414b2e82adb144e977e31, type: 3}
 --- !u!114 &114972081781710130
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -12,7 +12,7 @@ public class BossController : MonoBehaviour {
 	GameObject boss;
 	GameObject player;
 	public AudioClip m_damageClip;
-
+	GameObject score;
 	private float timeleft;
 	float rot;
 
@@ -20,6 +20,7 @@ public class BossController : MonoBehaviour {
 
 	void start(){
 		player = GameObject.Find ("player");
+		score=GameObject.Find ("Score");
 	}
 
 
@@ -65,6 +66,7 @@ public class BossController : MonoBehaviour {
 			if(Hp==0){
 			// 敵を削除する
 			Destroy( gameObject );
+			score.GetComponent<Score> ().score += 1000;
 			GameObject go =Instantiate (PowerupPrefab, transform.position, Quaternion.Euler(0, 0, 0));	
 				}
 			

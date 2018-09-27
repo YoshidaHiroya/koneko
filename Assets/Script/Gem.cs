@@ -19,6 +19,8 @@ public class Gem : MonoBehaviour
 	// 毎フレーム呼び出される関数
 	private void Update()
 	{
+
+
 		// 散らばる速度を計算する
 		var velocity = m_direction * m_speed;
 

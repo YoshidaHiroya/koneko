@@ -8,9 +8,10 @@ public class Wall : MonoBehaviour {
 	float x;
 	float y;
 	float z;
+	GameObject score;
 	// Use this for initialization
 	void Start () {
-		
+		score = GameObject.Find ("Score");
 	}
 	
 	// Update is called once per frame
@@ -26,7 +27,7 @@ public class Wall : MonoBehaviour {
 		// 弾と衝突した場合
 		if ( collision.name.Contains( "Shot" ) )
 		{
-
+			score.GetComponent<Score> ().score +=5;
 			Debug.Log ("かべ！");
 			Instantiate( 
 				m_explosionPrefab, 
