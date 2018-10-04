@@ -15,6 +15,9 @@ public class BossController : MonoBehaviour {
 	GameObject score;
 	private float timeleft;
 	float rot;
+	float x;
+	float y;
+	float z;
 
 
 
@@ -31,10 +34,10 @@ public class BossController : MonoBehaviour {
 		timeleft -= Time.deltaTime;
 		if (timeleft <= 0.0) {
 			timeleft = 1.0f;
+
 			Instantiate (arrowPrefab, transform.position, Quaternion.Euler (0, 0, -90));
 				
 		}
-
 			Vector3 playerPos = this.player.transform.position;
 			transform.position = new Vector3 (playerPos.x, playerPos.y, transform.position.z);
 

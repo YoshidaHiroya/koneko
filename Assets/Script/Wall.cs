@@ -9,9 +9,13 @@ public class Wall : MonoBehaviour {
 	float y;
 	float z;
 	GameObject score;
+	GameObject target;
 	// Use this for initialization
 	void Start () {
 		score = GameObject.Find ("Score");
+		target = GameObject.Find("Player");
+
+
 	}
 	
 	// Update is called once per frame
@@ -19,7 +23,8 @@ public class Wall : MonoBehaviour {
 		transform.Translate(-0.1f,0,0);
 		x += 75 * Time.deltaTime;
 		y = 0;
-		z =0;
+		z = 0;
+		//transform.rotation = Quaternion.LookRotation (target.transform.position - transform.position);
 		transform.rotation = Quaternion.Euler (x, y, z);
 	}
 	private void OnTriggerEnter2D( Collider2D collision )

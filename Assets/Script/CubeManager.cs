@@ -19,7 +19,7 @@ public class CubeManager : MonoBehaviour {
 		//だいたい1秒ごとに処理を行う
 		timeleft -= Time.deltaTime;
 		if (timeleft <= 0.0) {
-			timeleft = 1.0f;
+			timeleft =0.5f;
 			Instantiate (CubePrefab, transform.position, Quaternion.Euler (0, 0, -90));
 
 		}

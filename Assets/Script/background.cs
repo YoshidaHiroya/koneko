@@ -1,12 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using System.Collections;
 
 public class background : MonoBehaviour {
 
-
-	// Update is called once per frame
 	void Update () {
-		transform.position -= new Vector3 (3.0f, 0, 0) * Time.deltaTime;
+		transform.Translate (-0.03f, 0, 0);
+
 	}
 }

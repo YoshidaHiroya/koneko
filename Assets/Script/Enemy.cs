@@ -46,7 +46,7 @@ using System.Linq;
 		private void Update()
 		{
 			// まっすぐ移動する
-			transform.localPosition += m_direction * m_speed;
+		transform.localPosition += m_direction * m_speed;
 		transform.Translate(-0.1f,0,0);
 		}
 

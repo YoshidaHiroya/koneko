@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour {
 	GameObject boss;
 	// Use this for initialization
 
-	public static Vector2 m_moveLimit = new Vector2( 19.4f, 4.0f );
+	public static Vector2 m_moveLimit = new Vector2( 10.4f, 3.8f );
 
 	// 指定された位置を移動可能な範囲に収めた値を返す
 	public static Vector3 ClampPosition( Vector3 position )
@@ -95,9 +95,7 @@ public class PlayerController : MonoBehaviour {
 	private void ShootNWay( 
 		float angleBase, float angleRange, float speed, int count )
 	{
-		var pos = transform.localPosition; // プレイヤーの位置
-		var rot = transform.localRotation; // プレイヤーの向き
-
+		
 		// 弾を複数発射する場合
 		if ( 1 < count )
 		{
@@ -109,7 +107,9 @@ public class PlayerController : MonoBehaviour {
 					angleRange * ( ( float )i / ( count - 1 ) - 0.5f );
 
 				// 発射する弾を生成する
-				var shot = Instantiate( m_shotPrefab, pos, rot );
+				var shot = Instantiate( m_shotPrefab, transform.localPosition, transform.localRotation );
+				// プレイヤーの位置
+				// プレイヤーの向き
 
 				// 弾を発射する方向と速さを設定する
 				shot.Init( angle, speed );
@@ -119,7 +119,7 @@ public class PlayerController : MonoBehaviour {
 		else if ( count == 1 )
 		{
 			// 発射する弾を生成する
-			var shot = Instantiate( m_shotPrefab, pos, rot );
+			var shot = Instantiate( m_shotPrefab, transform.localPosition, transform.localRotation);
 
 			// 弾を発射する方向と速さを設定する
 			shot.Init( angleBase, speed );
@@ -151,6 +151,20 @@ public class PlayerController : MonoBehaviour {
 			var audioSource = FindObjectOfType<AudioSource>();
 			audioSource.PlayOneShot( m_damageClip );
 		}
+		if (col.gameObject.tag == "Wall") {
+			Destroy (col.gameObject);
+			Debug.Log ("カベ");
+			director.GetComponent<GameDirector> ().DecreaseHP ();
+			score.GetComponent<Score> ().score += 10;
+			var audioSource = FindObjectOfType<AudioSource>();
+			audioSource.PlayOneShot( m_damageClip );
+		}
+
+
+
+
+
+
 
 		if (col.gameObject.tag == "Boss") {
 			Debug.Log ("ぼす");
