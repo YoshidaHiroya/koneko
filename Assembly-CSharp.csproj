@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\GameovertoStart.cs" />
+     <Compile Include="Assets\ScoreScript.cs" />
      <Compile Include="Assets\Script\arrow.cs" />
      <Compile Include="Assets\Script\ArrowController.cs" />
      <Compile Include="Assets\Script\background.cs" />
