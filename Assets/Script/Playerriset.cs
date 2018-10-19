@@ -7,7 +7,7 @@ public class Playerriset : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		score = 0;
-		PlayerPrefs.SetInt ("highscore", score);
+		PlayerPrefs.SetInt ("highscore", score);//名前、保存する変数名
 		PlayerPrefs.Save ();
 	}
 	

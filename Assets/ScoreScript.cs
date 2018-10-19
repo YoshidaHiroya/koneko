@@ -7,7 +7,7 @@ public class ScoreScript : MonoBehaviour {
 	Text text;
 	// Use this for initialization
 	void Start () {
-		var i =PlayerPrefs.GetInt("highscore",1);
+		var i =PlayerPrefs.GetInt("highscore");
 		score = GameObject.Find ("SCORE");
 		text = score.GetComponent<Text> ();
 		text.text = "SCORE:"+(i.ToString ());
