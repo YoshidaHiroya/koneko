@@ -8,7 +8,7 @@ public class kodomonokoriScript : MonoBehaviour {
 	public int count;
 	// Use this for initialization
 	void Start () {
-		
+		text = this.gameObject.GetComponent<Text> ();
 	}
 	
 	// Update is called once per frame

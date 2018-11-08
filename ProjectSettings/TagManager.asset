@@ -10,6 +10,7 @@ TagManager:
   - Boss
   - Powerup
   - Wall
+  - kodomo
   layers:
   - Default
   - TransparentFX
