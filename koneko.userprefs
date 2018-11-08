@@ -1,19 +1,22 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Powerup.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Playerriset.cs">
     <Files>
-      <File FileName="Assets/GameovertoStart.cs" Line="17" Column="9" />
-      <File FileName="Assets/Script/background.cs" Line="8" Column="3" />
-      <File FileName="Assets/Script/PlayerController.cs" Line="4" Column="1" />
+      <File FileName="Assets/GameovertoStart.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/background.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/PlayerController.cs" Line="1" Column="1" />
       <File FileName="Assets/Script/BossController.cs" Line="1" Column="1" />
       <File FileName="Assets/Script/Wall.cs" Line="1" Column="1" />
       <File FileName="Assets/Script/Enemy.cs" Line="1" Column="1" />
-      <File FileName="Assets/Script/Goal.cs" Line="19" Column="42" />
+      <File FileName="Assets/Script/Goal.cs" Line="1" Column="1" />
       <File FileName="Assets/Script/Powerup.cs" Line="1" Column="1" />
       <File FileName="Assets/Script/arrow.cs" Line="1" Column="1" />
       <File FileName="Assets/Script/Shot.cs" Line="1" Column="1" />
       <File FileName="Assets/Script/EnemyManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/Script/Score.cs" Line="4" Column="1" />
+      <File FileName="Assets/Script/Score.cs" Line="12" Column="41" />
+      <File FileName="Assets/Script/Playerriset.cs" Line="10" Column="55" />
+      <File FileName="Assets/ScoreScript.cs" Line="10" Column="40" />
+      <File FileName="Assets/Script/CameraController.cs" Line="14" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

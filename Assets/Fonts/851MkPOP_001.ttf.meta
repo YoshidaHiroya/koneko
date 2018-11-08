@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 1e43be792ced44445ac0a420b122c95c
+timeCreated: 1541654027
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: 851MkPOP
+  fontNames:
+  - 851MkPOP
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
