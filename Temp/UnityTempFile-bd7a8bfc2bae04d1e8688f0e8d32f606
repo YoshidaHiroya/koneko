@@ -98,7 +98,7 @@
 -define:UNITY_IPHONE
 -define:UNITY_IPHONE_API
 -define:SUPPORT_MULTIPLE_DISPLAYS
--define:ENABLE_IL2CPP
+-define:ENABLE_MONO
 -define:NET_2_0_SUBSET
 -define:ENABLE_PROFILER
 -define:DEBUG
@@ -113,7 +113,6 @@
 -define:ENABLE_IOS_APP_SLICING
 -define:UNITY_HAS_GOOGLEVR
 'Assets/GameovertoStart.cs'
-'Assets/ScoreScript.cs'
 'Assets/Script/arrow.cs'
 'Assets/Script/ArrowController.cs'
 'Assets/Script/background.cs'
@@ -128,13 +127,14 @@
 'Assets/Script/GameDirector.cs'
 'Assets/Script/Gem.cs'
 'Assets/Script/Goal.cs'
+'Assets/Script/kodomonokoriScript.cs'
 'Assets/Script/PlayerController.cs'
 'Assets/Script/Playerriset.cs'
 'Assets/Script/Powerup.cs'
 'Assets/Script/Score.cs'
+'Assets/Script/ScoreScript.cs'
 'Assets/Script/Shot.cs'
 'Assets/Script/StarttoStage1.cs'
-'Assets/Script/Timer.cs'
 'Assets/Script/Wall.cs'
 -r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Runtime.Serialization.dll'
 -r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Xml.Linq.dll'

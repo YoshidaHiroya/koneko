@@ -33,9 +33,16 @@ public class BossController : MonoBehaviour {
 		//だいたい1秒ごとに処理を行う
 		timeleft -= Time.deltaTime;
 		if (timeleft <= 0.0) {
-			timeleft = 1.0f;
-
-			Instantiate (arrowPrefab, transform.position, Quaternion.Euler (0, 0, -90));
+			timeleft = 2.5f;
+			for (int i = 0; i < 100; i += 7) {
+				Instantiate (arrowPrefab, transform.position, Quaternion.Euler (i, 15, 45));
+				Instantiate (arrowPrefab, transform.position, Quaternion.Euler ((i+90), 15, 45));
+				Instantiate (arrowPrefab, transform.position, Quaternion.Euler ((i+180), 15, 45));
+				Instantiate (arrowPrefab, transform.position, Quaternion.Euler ((i+270), 15, 45));
+			}
+			//for (int i = 0; i < 5; i++) {
+			//	Instantiate (arrowPrefab, new Vector3 (0, 0, this.transform.position.z), Quaternion.Euler (45, 90 + i * 10, 45));
+			//}Instantiate (arrowPrefab, transform.position, Quaternion.Euler (0, 0, -90));
 				
 		}
 			Vector3 playerPos = this.player.transform.position;

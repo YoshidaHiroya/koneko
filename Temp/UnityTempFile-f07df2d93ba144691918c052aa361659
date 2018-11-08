@@ -113,7 +113,6 @@
 -define:ENABLE_IOS_APP_SLICING
 -define:UNITY_HAS_GOOGLEVR
 'Assets/GameovertoStart.cs'
-'Assets/kodomonokoriScript.cs'
 'Assets/Script/arrow.cs'
 'Assets/Script/ArrowController.cs'
 'Assets/Script/background.cs'
@@ -128,7 +127,7 @@
 'Assets/Script/GameDirector.cs'
 'Assets/Script/Gem.cs'
 'Assets/Script/Goal.cs'
-'Assets/Script/kodomoScript.cs'
+'Assets/Script/kodomonokoriScript.cs'
 'Assets/Script/PlayerController.cs'
 'Assets/Script/Playerriset.cs'
 'Assets/Script/Powerup.cs'
