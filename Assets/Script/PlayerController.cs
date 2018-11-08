@@ -17,9 +17,10 @@ public class PlayerController : MonoBehaviour {
 	public AudioClip m_damageClip;
 	public AudioClip PowerUp;
 	GameObject boss;
+	GameObject kodomo;
 	// Use this for initialization
 
-	public static Vector2 m_moveLimit = new Vector2( 10.4f, 3.8f );
+	public static Vector2 m_moveLimit = new Vector2( 100, 100 );
 
 	// 指定された位置を移動可能な範囲に収めた値を返す
 	public static Vector3 ClampPosition( Vector3 position )
@@ -33,7 +34,7 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void Start () {
-		
+		kodomo = GameObject.Find ("kodomo");
 		boss = GameObject.Find ("Boss");
 	}
 	
@@ -50,10 +51,6 @@ public class PlayerController : MonoBehaviour {
 		transform.localPosition += velocity;
 	
 
-		//if (Input.GetKeyDown (KeyCode.Space)) {			
-		//	GameObject go =Instantiate (arrowPrefab, transform.position, Quaternion.Euler(0, 0, 90));	
-		//	aS.PlayOneShot(boyon);
-		//}
 		transform.localPosition = ClampPosition( transform.localPosition );
 
 		// 弾の発射タイミングを管理するタイマーを更新する
@@ -159,7 +156,11 @@ public class PlayerController : MonoBehaviour {
 			var audioSource = FindObjectOfType<AudioSource>();
 			audioSource.PlayOneShot( m_damageClip );
 		}
-
+		if (col.gameObject.tag == "kodomo") {
+			Destroy (col.gameObject);
+			Debug.Log ("こども");
+			kodomo.GetComponent<kodomonokoriScript>().count += 1;
+		}
 
 
 
