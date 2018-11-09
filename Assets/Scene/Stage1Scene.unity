@@ -496,7 +496,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &309154074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2045,7 +2045,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.1, y: 0.1}
   m_EdgeRadius: 0
 --- !u!50 &1147744402
 Rigidbody2D:
@@ -3276,7 +3276,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4563156957039334, guid: 5b2f803971f2344ee988568ed8479bfe, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -60.42
+      value: 102.43
+      objectReference: {fileID: 0}
+    - target: {fileID: 4331633124639624, guid: 5b2f803971f2344ee988568ed8479bfe, type: 2}
+      propertyPath: m_LocalScale.x
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 50412006779982312, guid: 5b2f803971f2344ee988568ed8479bfe, type: 2}

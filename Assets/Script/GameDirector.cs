@@ -12,7 +12,7 @@ public class GameDirector : MonoBehaviour {
 	}
 	
 	public void DecreaseHP(){
-		this.hpGauge.GetComponent<Image> ().fillAmount -= 0.1f;
+		this.hpGauge.GetComponent<Image> ().fillAmount -= 0.05f;
 		if (this.hpGauge.GetComponent<Image> ().fillAmount == 0) {
 			SceneManager.LoadScene ("GameOverScene");
 		}
