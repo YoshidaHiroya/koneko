@@ -39,6 +39,8 @@ public class BossController : MonoBehaviour {
 				Instantiate (arrowPrefab, transform.position, Quaternion.Euler ((i+90), 15, 45));
 				Instantiate (arrowPrefab, transform.position, Quaternion.Euler ((i+180), 15, 45));
 				Instantiate (arrowPrefab, transform.position, Quaternion.Euler ((i+270), 15, 45));
+				//Instantiate (arrowPrefab, new Vector3 (this.transform.position.x + 0.5f, transform.position.y, transform.position.z), Quaternion.identity);
+				//Instantiate (arrowPrefab, new Vector3 (this.transform.position.x - 0.5f, transform.position.y, transform.position.z), Quaternion.identity);
 			}
 			//for (int i = 0; i < 5; i++) {
 			//	Instantiate (arrowPrefab, new Vector3 (0, 0, this.transform.position.z), Quaternion.Euler (45, 90 + i * 10, 45));
