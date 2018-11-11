@@ -34,7 +34,7 @@ public class BossController : MonoBehaviour {
 		timeleft -= Time.deltaTime;
 		if (timeleft <= 0.0) {
 			timeleft = 2.5f;
-			for (int i = 0; i < 100; i += 7) {
+			for (int i = 0; i < 100; i += 8) {
 				Instantiate (arrowPrefab, transform.position, Quaternion.Euler (i, 15, 45));
 				Instantiate (arrowPrefab, transform.position, Quaternion.Euler ((i+90), 15, 45));
 				Instantiate (arrowPrefab, transform.position, Quaternion.Euler ((i+180), 15, 45));
