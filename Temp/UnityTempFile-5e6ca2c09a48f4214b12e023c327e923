@@ -113,6 +113,7 @@
 -define:ENABLE_IOS_APP_SLICING
 -define:UNITY_HAS_GOOGLEVR
 'Assets/GameovertoStart.cs'
+'Assets/Prefab/homingshot.cs'
 'Assets/Script/arrow.cs'
 'Assets/Script/ArrowController.cs'
 'Assets/Script/background.cs'
